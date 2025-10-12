@@ -16,7 +16,16 @@ header, footer {
 }
 h1 { font-size: 2em; margin-bottom: 0; }
 h2 { color: #003366; border-bottom: 2px solid #ccc; padding-bottom: 4px; }
-a { color: #003399; text-decoration: none; }
-a:hover { text-decoration: underline; }
+a {
+  color: #003399;          /* Deep blue for visibility */
+  text-decoration: none;   /* Removes the underline */
+  font-weight: 600;        /* Slightly bold for clarity */
+}
+
+a:hover {
+  color: #0055ff;          /* Brighter blue on hover */
+  text-decoration: underline;
+}
+
 section { margin-top: 30px; }
 ul { list-style-type: square; }
