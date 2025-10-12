@@ -1,0 +1,22 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  line-height: 1.6;
+  color: #222;
+  background: #f8f9fa;
+}
+header, footer {
+  text-align: center;
+  background: #003366;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+h1 { font-size: 2em; margin-bottom: 0; }
+h2 { color: #003366; border-bottom: 2px solid #ccc; padding-bottom: 4px; }
+a { color: #003399; text-decoration: none; }
+a:hover { text-decoration: underline; }
+section { margin-top: 30px; }
+ul { list-style-type: square; }
