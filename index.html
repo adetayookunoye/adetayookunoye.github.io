@@ -16,9 +16,9 @@
 <section id="overview">
   <h2>Research Overview</h2>
   <p>
-    My research lies at the intersection of <b>machine learning, physics, and scientific computing</b> — 
-    an emerging domain known as <b>AI for Scientific Discovery</b>. I develop 
-    <b>provably constrained probabilistic operator models</b> that enable AI systems to learn from 
+    My research lies at the intersection of machine learning, physics, and scientific computing — 
+    an emerging domain known as AI for Scientific Discovery. I develop 
+    provably constrained probabilistic operator models that enable AI systems to learn from 
     and reason about complex physical systems while remaining faithful to the laws of science.
   </p>
   <p>
@@ -27,7 +27,7 @@
     Most existing neural operator frameworks learn powerful function mappings but 
     often violate the governing conservation laws that make physical systems predictable and interpretable. 
     My research introduces architectural innovations that make such violations impossible by design — 
-    enabling the next generation of <b>data-efficient, trustworthy, and interpretable surrogates</b> 
+    enabling the next generation of data-efficient, trustworthy, and interpretable surrogates 
     for large-scale scientific simulations.
   </p>
 </section>
@@ -46,58 +46,58 @@
 <section id="phases">
   <h2>Research Roadmap</h2>
 
-  <h3>Phase 1 — Foundation & The Tractable Testbed</h3>
+  <h3>Phase 1 : Foundation & The Tractable Testbed</h3>
   <p>
     Establishes a rigorous understanding of the literature and builds reproducible baselines for 
     learning partial differential equations (PDEs) under uncertainty.
   </p>
   <ul>
-    <li><b>Focus Areas:</b> Hard-constrained architectures (divergence-free nets, Hamiltonian NNs), 
+    <li>Focus Areas : Hard-constrained architectures (divergence-free nets, Hamiltonian NNs), 
         probabilistic operator learning (FNO, DeepONet), and generative models for PDEs (Diffusion, VAEs).</li>
-    <li><b>Physics Selected:</b> The 2D Incompressible Navier–Stokes Equation — a benchmark problem with 
+    <li>Physics Selected: The 2D Incompressible Navier–Stokes Equation, a benchmark problem with 
         mass conservation (∇·u = 0) and well-characterized turbulence dynamics.</li>
-    <li><b>Goal:</b> Learn a probabilistic operator that maps distributions of initial conditions to distributions of 
+    <li>Goal: Learn a probabilistic operator that maps distributions of initial conditions to distributions of 
         future states while provably conserving mass.</li>
   </ul>
 
-  <h3>Phase 2 — The Hard-Constrained Deterministic Core</h3>
+  <h3>Phase 2 : The Hard-Constrained Deterministic Core</h3>
   <p>
     Develops a deterministic neural operator architecture that enforces physical constraints exactly. 
-    This phase introduces the <b>Divergence-Free Fourier Neural Operator (DF-FNO)</b>, 
+    This phase introduces the Divergence-Free Fourier Neural Operator (DF-FNO), 
     which predicts the stream function ψ instead of raw velocity components. 
     This ensures the resulting velocity field satisfies ∇·u = 0 by construction.
   </p>
   <ul>
-    <li><b>Contribution:</b> Demonstrates how soft physics penalties (like PINO) can be 
+    <li>Contribution : Demonstrates how soft physics penalties (like PINO) can be 
         replaced by <em>architectural guarantees</em> that enforce conservation to machine precision.</li>
-    <li><b>Outcome:</b> A general methodology for building physically consistent deep learning architectures.</li>
+    <li>Outcome : A general methodology for building physically consistent deep learning architectures.</li>
   </ul>
 
-  <h3>Phase 3 — The Probabilistic Leap</h3>
+  <h3>Phase 3 : The Probabilistic Leap</h3>
   <p>
     Extends the deterministic foundation into the probabilistic domain by coupling the 
-    divergence-free operator with a <b>Conditional Variational Autoencoder (cVAE)</b>. 
+    divergence-free operator with a Conditional Variational Autoencoder (cVAE). 
     This creates a generative model capable of sampling multiple physically valid solutions 
     corresponding to uncertain or ambiguous initial conditions.
   </p>
   <ul>
-    <li><b>Innovation:</b> Every generated sample adheres to the governing PDE constraints, 
+    <li>Innovation : Every generated sample adheres to the governing PDE constraints, 
         providing uncertainty quantification without compromising physical validity.</li>
-    <li><b>Paper Title:</b> “Sampling from the Physical Manifold: Probabilistic Neural Operators with Hard Constraints.”</li>
+    <li>Paper Title: “Sampling from the Physical Manifold: Probabilistic Neural Operators with Hard Constraints.”</li>
   </ul>
 
-  <h3>Phase 4 — Demonstration & Abstraction</h3>
+  <h3>Phase 4 : Demonstration & Abstraction</h3>
   <p>
     This final phase generalizes the methodology beyond fluid dynamics to other physical systems, 
     such as the Wave Equation and Darcy Flow, and delivers open-source infrastructure 
     to enable broader adoption of constraint-preserving learning.
   </p>
   <ul>
-    <li><b>Deliverable:</b> A lightweight library of constraint-enforcing neural layers 
+    <li>Deliverable: A lightweight library of constraint-enforcing neural layers 
         (e.g., <em>DivergenceFreeOutput</em>, <em>SymmetricOutput</em>, <em>ExactBoundaryCondition</em>).</li>
-    <li><b>Interpretability Goal:</b> Analyze latent dimensions in the generative models to identify 
+    <li>Interpretability Goal: Analyze latent dimensions in the generative models to identify 
         physically interpretable mechanisms (e.g., vortex strength or energy transfer).</li>
-    <li><b>Thesis Output:</b> A unified framework for <em>Provably Constrained Probabilistic Operators</em> — 
+    <li>Thesis Output: A unified framework for <em>Provably Constrained Probabilistic Operators</em> — 
         merging determinism, uncertainty, and physics-based guarantees.</li>
   </ul>
 </section>
@@ -105,13 +105,13 @@
 <section id="impact">
   <h2>Broader Impact & Vision</h2>
   <p>
-    This research advances a new paradigm where <b>AI becomes a scientific instrument</b> — not just a prediction tool. 
+    This research advances a new paradigm where AI becomes a scientific instrument, not just a prediction tool. 
     By enforcing the laws of nature within neural architectures, these models can accelerate scientific discovery, 
     reduce the cost of simulations, and enhance trust in AI-driven decision-making for domains such as 
     climate modeling, fluid mechanics, and materials design.
   </p>
   <p>
-    The ultimate vision is to contribute to the broader field of <b>Scientific Machine Learning (SciML)</b> 
+    The ultimate vision is to contribute to the broader field of Scientific Machine Learning (SciML)
     by establishing principles for physically grounded AI — models that not only perform but also <em>explain</em> 
     their reasoning through scientific structure.
   </p>
@@ -120,9 +120,9 @@
 <section id="publications">
   <h2>Publications & Presentations</h2>
   <ul>
-    <li><b>Forecasting Cancer Screening Behavior from Longitudinal Data with Embedding-Augmented Deep Learning.</b> 
+    <li>Forecasting Cancer Screening Behavior from Longitudinal Data with Embedding-Augmented Deep Learning. 
         <em>AISTATS 2026 (Under Review)</em></li>
-    <li><b>Automated Analysis of Microscopy Images using Deep Convolutional Neural Networks.</b> 
+    <li>Automated Analysis of Microscopy Images using Deep Convolutional Neural Networks. 
         <em>SPIE Conference (Published)</em></li>
   </ul>
 </section>
@@ -130,10 +130,10 @@
 <section id="projects">
   <h2>Software & Research Projects</h2>
   <ul>
-    <li><b>Wadeable Streams Project</b> — Developed intelligent data tools for environmental stream health monitoring 
+    <li>Wadeable Streams Project: Developed intelligent data tools for environmental stream health monitoring 
         under the U.S. Department of the Interior.</li>
-    <li><b>Asset Management System</b> — Designed a scalable system architecture for tracking and analytics in enterprise environments.</li>
-    <li><b>ExamPrep Platform</b> — Created an adaptive educational analytics platform integrating ML-based question difficulty estimation.</li>
+    <li>Asset Management System: Designed a scalable system architecture for tracking and analytics in enterprise environments.</li>
+    <li>ExamPrep Platform: Created an adaptive educational analytics platform integrating ML-based question difficulty estimation.</li>
   </ul>
 </section>
 
