@@ -10,118 +10,123 @@
 <header>
   <h1>Adetayo Olufemi Okunoye</h1>
   <p>Ph.D. Student in Computer Science, University of Georgia</p>
-  <p><b>Research Direction:</b> AI for Scientific Discovery</p>
+  <p><b>Research Focus:</b> AI for Scientific Discovery & Experimental Design</p>
   <nav>
-  <a href="index.html">Home</a> |
-  <a href="research.html">Research</a> |
-  <a href="publications.html">Publications</a> |
-  <a href="cv.html">CV</a> |
-  <a href="contact.html">Contact</a>
-</nav>
-
+    <a href="index.html">Home</a> |
+    <a href="research.html">Research</a> |
+    <a href="publications.html">Publications</a> |
+    <a href="cv.html">CV</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <section id="overview">
   <h2>Research Overview</h2>
   <p>
-    My research lies at the intersection of machine learning, physics, and scientific computing, 
-    an emerging domain known as AI for Scientific Discovery. I develop 
-    provably constrained probabilistic operator models that enable AI systems to learn from 
-    and reason about complex physical systems while remaining faithful to the laws of science.
+    My research develops artificial intelligence systems that accelerate scientific discovery through two complementary approaches: 
+    <b>physics-constrained machine learning</b> for scientific simulation and <b>active experimental design</b> for high-throughput biology.
   </p>
   <p>
-    The central goal of my work is to bridge the gap between 
-    <em>data-driven learning</em> and <em>physics-based reasoning</em>. 
-    Most existing neural operator frameworks learn powerful function mappings but 
-    often violate the governing conservation laws that make physical systems predictable and interpretable. 
-    My research introduces architectural innovations that make such violations impossible by design, 
-    enabling the next generation of data-efficient, trustworthy, and interpretable surrogates 
-    for large-scale scientific simulations.
+    In scientific simulation, I create provably constrained probabilistic operator models that learn from physical systems while remaining faithful to conservation laws. 
+    In experimental design, I develop closed-loop AI systems that optimize costly biological screens, dramatically reducing the resources needed for genomic discovery.
   </p>
 </section>
 
-<section id="topic">
-  <h2>Thesis Topic</h2>
-  <p><b>Provably Constrained Probabilistic Operators for Scientific Simulation</b></p>
-  <p>
-    By embedding physical constraints directly into the architecture of probabilistic operator models, 
-    I aim to create machine learning systems that not only <em>predict</em> but also <em>respect the physics</em> 
-    governing their domain. This ensures that learned models obey conservation laws, such as mass, energy, or symmetry, 
-    while providing calibrated uncertainty quantification over possible physical outcomes.
-  </p>
-</section>
+<section id="research-directions">
+  <h2>Research Directions</h2>
 
-<section id="phases">
-  <h2>Research Roadmap</h2>
+  <!-- Research Direction 1 -->
+  <div class="research-direction">
+    <h3>Direction 1: Provably Constrained Probabilistic Operators for Scientific Simulation</h3>
+    <p><b>Thesis Core:</b> Embedding physical constraints directly into neural operator architectures to create models that predict while respecting physics.</p>
+    
+    <div class="research-phase">
+      <h4>Phase 1: Foundation & The Tractable Testbed</h4>
+      <ul>
+        <li>Focus Areas: Hard-constrained architectures, probabilistic operator learning, generative models for PDEs</li>
+        <li>Physics: 2D Incompressible Navier–Stokes Equation with mass conservation (∇·u = 0)</li>
+        <li>Goal: Learn probabilistic operators that map initial conditions to future states while provably conserving mass</li>
+      </ul>
+    </div>
 
-  <h3>Phase 1 : Foundation & The Tractable Testbed</h3>
-  <p>
-    Establishes a rigorous understanding of the literature and builds reproducible baselines for 
-    learning partial differential equations (PDEs) under uncertainty.
-  </p>
-  <ul>
-    <li>Focus Areas : Hard-constrained architectures (divergence-free nets, Hamiltonian NNs), 
-        probabilistic operator learning (FNO, DeepONet), and generative models for PDEs (Diffusion, VAEs).</li>
-    <li>Physics Selected: The 2D Incompressible Navier–Stokes Equation, a benchmark problem with 
-        mass conservation (∇·u = 0) and well-characterized turbulence dynamics.</li>
-    <li>Goal: Learn a probabilistic operator that maps distributions of initial conditions to distributions of 
-        future states while provably conserving mass.</li>
-  </ul>
+    <div class="research-phase">
+      <h4>Phase 2: The Hard-Constrained Deterministic Core</h4>
+      <ul>
+        <li>Development of Divergence-Free Fourier Neural Operator (DF-FNO)</li>
+        <li>Architectural guarantees replacing soft physics penalties with exact conservation</li>
+        <li>General methodology for physically consistent deep learning architectures</li>
+      </ul>
+    </div>
 
-  <h3>Phase 2 : The Hard-Constrained Deterministic Core</h3>
-  <p>
-    Develops a deterministic neural operator architecture that enforces physical constraints exactly. 
-    This phase introduces the Divergence-Free Fourier Neural Operator (DF-FNO), 
-    which predicts the stream function ψ instead of raw velocity components. 
-    This ensures the resulting velocity field satisfies ∇·u = 0 by construction.
-  </p>
-  <ul>
-    <li>Contribution : Demonstrates how soft physics penalties (like PINO) can be 
-        replaced by <em>architectural guarantees</em> that enforce conservation to machine precision.</li>
-    <li>Outcome : A general methodology for building physically consistent deep learning architectures.</li>
-  </ul>
+    <div class="research-phase">
+      <h4>Phase 3: The Probabilistic Leap</h4>
+      <ul>
+        <li>Coupling divergence-free operators with Conditional Variational Autoencoders (cVAE)</li>
+        <li>Generative modeling with physically valid uncertainty quantification</li>
+        <li>Paper: "Sampling from the Physical Manifold: Probabilistic Neural Operators with Hard Constraints"</li>
+      </ul>
+    </div>
 
-  <h3>Phase 3 : The Probabilistic Leap</h3>
-  <p>
-    Extends the deterministic foundation into the probabilistic domain by coupling the 
-    divergence-free operator with a Conditional Variational Autoencoder (cVAE). 
-    This creates a generative model capable of sampling multiple physically valid solutions 
-    corresponding to uncertain or ambiguous initial conditions.
-  </p>
-  <ul>
-    <li>Innovation : Every generated sample adheres to the governing PDE constraints, 
-        providing uncertainty quantification without compromising physical validity.</li>
-    <li>Paper Title: “Sampling from the Physical Manifold: Probabilistic Neural Operators with Hard Constraints.”</li>
-  </ul>
+    <div class="research-phase">
+      <h4>Phase 4: Demonstration & Abstraction</h4>
+      <ul>
+        <li>Generalization to Wave Equation and Darcy Flow</li>
+        <li>Open-source library of constraint-enforcing neural layers</li>
+        <li>Interpretable latent dimensions for physical mechanisms</li>
+      </ul>
+    </div>
+  </div>
 
-  <h3>Phase 4 : Demonstration & Abstraction</h3>
-  <p>
-    This final phase generalizes the methodology beyond fluid dynamics to other physical systems, 
-    such as the Wave Equation and Darcy Flow, and delivers open-source infrastructure 
-    to enable broader adoption of constraint-preserving learning.
-  </p>
-  <ul>
-    <li>Deliverable: A lightweight library of constraint-enforcing neural layers 
-        (e.g., <em>DivergenceFreeOutput</em>, <em>SymmetricOutput</em>, <em>ExactBoundaryCondition</em>).</li>
-    <li>Interpretability Goal: Analyze latent dimensions in the generative models to identify 
-        physically interpretable mechanisms (e.g., vortex strength or energy transfer).</li>
-    <li>Thesis Output: A unified framework for <em>Provably Constrained Probabilistic Operators,</em>
-        merging determinism, uncertainty, and physics-based guarantees.</li>
-  </ul>
+  <!-- Research Direction 2 -->
+  <div class="research-direction">
+    <h3>Direction 2: Closed-Loop Active Design for Genome-wide Perturb-seq</h3>
+    <p><b>Thesis Extension:</b> Optimal transport and mutual information frameworks for cost-effective perturbation discovery in single-cell genomics.</p>
+    
+    <div class="research-aim">
+      <h4>Aim 1: Novel Acquisition Functions for Perturbation Selection</h4>
+      <ul>
+        <li>Bayesian encoder-decoder trained on Replogle CRISPRi data</li>
+        <li><b>OT-based acquisition:</b> Using transport-mass entropy and displacement norms as uncertainty signals</li>
+        <li><b>Mutual information acquisition:</b> BatchBALD adaptation for transcriptomic effect vectors</li>
+        <li>Novelty: First use of OT plan properties to drive active selection in Perturb-seq</li>
+      </ul>
+    </div>
+
+    <div class="research-aim">
+      <h4>Aim 2: Standardized Benchmark for Active Perturb-seq Design</h4>
+      <ul>
+        <li>Offline "counterfactual" benchmark using Replogle 2022 data</li>
+        <li>Stratified splits by pathways and gene essentiality</li>
+        <li>Area Under Learning Curve (AULC) metrics for R² and DE recall</li>
+        <li>Comparison: OT-acquisition vs. Bayesian BALD vs. core-set k-center</li>
+      </ul>
+    </div>
+
+    <div class="research-aim">
+      <h4>Aim 3: Guide-Pair Selection & Practical Deployment</h4>
+      <ul>
+        <li>Extension to guide-pair acquisition for interaction discovery</li>
+        <li>Information gain maximization for synergistic effects</li>
+        <li>Development of "Policy API" for plug-and-play experimental design</li>
+        <li>Budget-aware ranking of perturbations without wet-lab integration</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section id="impact">
   <h2>Broader Impact & Vision</h2>
   <p>
-    This research advances a new paradigm where AI becomes a scientific instrument, not just a prediction tool. 
-    By enforcing the laws of nature within neural architectures, these models can accelerate scientific discovery, 
-    reduce the cost of simulations, and enhance trust in AI-driven decision-making for domains such as 
-    climate modeling, fluid mechanics, and materials design.
+    My research advances AI as a fundamental instrument for scientific discovery. In scientific simulation, 
+    enforcing physical laws within neural architectures enables trustworthy, interpretable surrogates that 
+    accelerate climate modeling, fluid mechanics, and materials design. In experimental design, 
+    AI-driven active learning reduces the cost of genomic screens by orders of magnitude, 
+    making large-scale perturbation studies accessible to more labs and accelerating therapeutic target discovery.
   </p>
   <p>
-    The ultimate vision is to contribute to the broader field of Scientific Machine Learning (SciML)
-    by establishing principles for physically grounded AI models that not only perform but also <em>explain</em> 
-    their reasoning through scientific structure.
+    The unifying vision is to develop AI systems that not only predict but also <em>reason</em> and <em>design</em> 
+    within scientific constraints, bridging data-driven learning with domain knowledge to solve previously 
+    intractable problems in both physical and biological sciences.
   </p>
 </section>
 
@@ -132,16 +137,20 @@
         <em>AISTATS 2026 (Under Review)</em></li>
     <li>Automated Analysis of Microscopy Images using Deep Convolutional Neural Networks. 
         <em>SPIE Conference (Published)</em></li>
+    <li>Sampling from the Physical Manifold: Probabilistic Neural Operators with Hard Constraints. 
+        <em>In Preparation</em></li>
+    <li>Closed-Loop Active Design for Perturb-seq: An OT and MI Framework. 
+        <em>In Preparation</em></li>
   </ul>
 </section>
 
 <section id="projects">
   <h2>Software & Research Projects</h2>
   <ul>
-    <li>Wadeable Streams Project: Developed intelligent data tools for environmental stream health monitoring 
-        under the U.S. Department of the Interior.</li>
-    <li>Asset Management System: Designed a scalable system architecture for tracking and analytics in enterprise environments.</li>
-    <li>ExamPrep Platform: Created an adaptive educational analytics platform integrating ML-based question difficulty estimation.</li>
+    <li><b>ConstrainedOperators.jl:</b> Library for physics-constrained neural operators in scientific ML</li>
+    <li><b>PerturbSeq-AL:</b> Active learning benchmark and policy API for Perturb-seq experimental design</li>
+    <li>Wadeable Streams Project: Intelligent data tools for environmental stream health monitoring (U.S. Department of the Interior)</li>
+    <li>ExamPrep Platform: Adaptive educational analytics with ML-based question difficulty estimation</li>
   </ul>
 </section>
 
@@ -156,10 +165,11 @@
   <p>✉️ <a href="mailto:aoo29179@uga.edu">Email</a></p>
   <p>🔗 <a href="https://linkedin.com/in/adetayookunoye" target="_blank">LinkedIn</a></p>
   <p>🧠 <a href="https://scholar.google.com/citations?user=Hj3UueAAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a></p>
+  <p>💻 <a href="https://github.com/adetayoo" target="_blank">GitHub</a></p>
 </section>
 
 <footer>
-  <p>© 2025 Adetayo O. Okunoye | AI for Scientific Discovery | University of Georgia</p>
+  <p>© 2025 Adetayo O. Okunoye | AI for Scientific Discovery & Experimental Design | University of Georgia</p>
 </footer>
 
 </body>
