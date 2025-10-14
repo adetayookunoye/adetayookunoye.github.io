@@ -49,3 +49,103 @@ nav {
 
 section { margin-top: 30px; }
 ul { list-style-type: square; }
+
+.research-intro {
+  margin-bottom: 2.5rem;
+  font-size: 1.1em;
+  line-height: 1.7;
+}
+
+.research-thrusts {
+  display: grid;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.thrust {
+  background: #f8f9fa;
+  border-left: 4px solid #2c3e50;
+  padding: 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.thrust h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.3em;
+}
+
+.thrust-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.problem-statement, .approach, .applications {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.problem-statement h4, .approach h4, .applications h4 {
+  color: #34495e;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.1em;
+}
+
+.approach ul {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.approach li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.approach strong {
+  color: #2c3e50;
+}
+
+.research-synthesis {
+  background: #e8f4f8;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #b8d8e8;
+}
+
+.research-synthesis h3 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .thrust-content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "problem approach"
+      "applications applications";
+  }
+  
+  .problem-statement {
+    grid-area: problem;
+  }
+  
+  .approach {
+    grid-area: approach;
+  }
+  
+  .applications {
+    grid-area: applications;
+  }
+}
+
+@media (min-width: 1024px) {
+  .thrust-content {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "problem approach applications";
+  }
+}
