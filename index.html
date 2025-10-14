@@ -22,14 +22,112 @@
 
 <section id="overview">
   <h2>Research Overview</h2>
-  <p>
-    My research develops artificial intelligence systems that accelerate scientific discovery through two complementary approaches: 
-    physics-constrained machine learning for scientific discovery and active experimental design for high-throughput biology.
-  </p>
-  <p>
-    In  physics-constrained machine learning, I will create provably constrained probabilistic operator models that learn from physical systems while remaining faithful to conservation laws. 
-    In closed-Loop active design for Genome-wide Perturb-seq, I wil develop closed-loop AI systems that optimize costly biological screens, dramatically reducing the resources needed for genomic discovery.
-  </p>
+  
+  <div class="research-intro">
+    <p>
+      My research program develops <strong>artificial intelligence systems that fundamentally accelerate scientific discovery</strong> 
+      by bridging the gap between data-driven learning and domain-specific knowledge. I pursue this vision through two complementary 
+      research thrusts that address critical bottlenecks in both computational and experimental science:
+    </p>
+  </div>
+
+  <div class="research-thrusts">
+    <div class="thrust">
+      <h3>Thrust 1: Physics-Constrained Machine Learning for Scientific Simulation</h3>
+      <div class="thrust-content">
+        <div class="problem-statement">
+          <h4>Problem</h4>
+          <p>
+            Current deep learning approaches for scientific simulation often violate fundamental physical laws, 
+            producing physically implausible results that limit their utility in real-world applications. 
+            While neural operators can learn powerful mappings from data, they frequently fail to respect 
+            conservation laws, symmetry principles, and other domain constraints that make physical systems 
+            predictable and interpretable.
+          </p>
+        </div>
+        
+        <div class="approach">
+          <h4>Approach</h4>
+          <p>
+            I develop <strong>provably constrained probabilistic operator models</strong> that embed physical 
+            constraints directly into neural architectures through mathematical guarantees rather than 
+            soft penalties. By designing models where conservation laws (mass, energy, momentum) are 
+            enforced <em>by construction</em>, I create AI systems that learn from physical systems while 
+            remaining fundamentally faithful to the underlying physics.
+          </p>
+          <ul>
+            <li><strong>Architectural Guarantees:</strong> Designing neural networks that inherently satisfy PDE constraints through careful architectural choices</li>
+            <li><strong>Probabilistic Modeling:</strong> Incorporating uncertainty quantification while maintaining physical consistency</li>
+            <li><strong>Multi-Scale Learning:</strong> Bridging scales from microscopic interactions to macroscopic phenomena</li>
+          </ul>
+        </div>
+
+        <div class="applications">
+          <h4>Applications</h4>
+          <p>
+            Climate modeling, fluid dynamics, materials design, and renewable energy systems—domains where 
+            physical consistency is non-negotiable and traditional simulations are computationally prohibitive.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="thrust">
+      <h3>Thrust 2: Closed-Loop Active Design for Genome-wide Perturb-seq</h3>
+      <div class="thrust-content">
+        <div class="problem-statement">
+          <h4>Problem</h4>
+          <p>
+            Genome-scale Perturb-seq screens, which measure transcriptomic responses to genetic perturbations, 
+            are revolutionizing functional genomics but remain prohibitively expensive. Profiling a full library 
+            of perturbations requires millions of cells and substantial financial resources, creating a fundamental 
+            accessibility barrier for most research labs and limiting the scale of biological discovery.
+          </p>
+        </div>
+        
+        <div class="approach">
+          <h4>Approach</h4>
+          <p>
+            I create <strong>closed-loop AI systems that actively design optimal perturbation experiments</strong> 
+            by sequentially selecting the most informative genetic perturbations to profile. My framework combines 
+            optimal transport theory with information-theoretic acquisition functions to maximize learning efficiency 
+            under strict experimental budgets.
+          </p>
+          <ul>
+            <li><strong>Optimal Transport Acquisition:</strong> Using transport plan properties as novel uncertainty signals for perturbation selection</li>
+            <li><strong>Mutual Information Maximization:</strong> Adapting information-theoretic criteria to high-dimensional transcriptomic effect spaces</li>
+            <li><strong>Interaction Discovery:</strong> Extending active selection to guide pairs for synergistic effect identification</li>
+            <li><strong>Practical Deployment:</strong> Developing plug-and-play policy APIs for immediate lab adoption</li>
+          </ul>
+        </div>
+
+        <div class="applications">
+          <h4>Applications</h4>
+          <p>
+            Functional genomics, drug target discovery, genetic interaction mapping, and personalized medicine—enabling 
+            large-scale perturbation studies at a fraction of current costs while accelerating therapeutic development.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="research-synthesis">
+    <h3>Unifying Vision</h3>
+    <p>
+      While addressing different scientific domains, both research thrusts share a common philosophy: 
+      <strong>AI should not merely predict but should reason within scientific constraints</strong>. 
+      In simulation, this means respecting physical laws; in experimental design, this means optimizing 
+      information gain under resource constraints. By developing AI systems that understand and operate 
+      within these fundamental boundaries, I aim to create the next generation of scientific tools that 
+      are not just powerful but also trustworthy, interpretable, and practically deployable.
+    </p>
+    <p>
+      The ultimate goal is to establish <strong>principled frameworks for AI-driven scientific discovery</strong> 
+      that can be adapted across multiple domains, accelerating our understanding of complex systems 
+      from the molecular to the planetary scale.
+    </p>
+  </div>
 </section>
 
 <section id="research-directions">
