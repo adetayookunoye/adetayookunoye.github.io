@@ -68,32 +68,38 @@
     </div>
 
     <div class="thrust">
-      <h3>Thrust 2: GlycoGoT + GlycoKG — Reasoned, Constraint-Aware Biomarker Discovery</h3>
-      <div class="thrust-content">
-        <div class="problem-statement">
-          <h4>Challenge</h4>
-          <p>
-            Many “significant” glycan signals do not replicate across cohorts or lack mechanistic grounding.
-          </p>
+        <h3>Thrust 2: GlycoGoT + GlycoKG — Knowledge-Guided Biomarker Discovery with Causal Reasoning</h3>
+        <div class="thrust-content">
+            <div class="problem-statement">
+                <h4>Challenge</h4>
+                <p>
+                    Current glycan biomarker discovery often identifies statistically significant signals that fail to replicate 
+                    across cohorts due to limited mechanistic grounding and insufficient integration of biosynthetic constraints. 
+                    This results in biomarkers that lack biological plausibility and clinical translatability.
+                </p>
+            </div>
+        
+            <div class="approach">
+                <h4>Research Approach</h4>
+                <ul>
+                    <li><b>GlycoKG Knowledge Graph:</b> Comprehensive encoding of biosynthetic pathways, enzyme specificities, 
+                        tissue-specific expression patterns, and established disease associations using RDF/SHACL constraints.</li>
+                    <li><b>GlycoGoT Reasoning Engine:</b> A graph-of-thoughts controller that orchestrates multi-step biomarker 
+                        validation through propose → validate → refine cycles, dynamically routing between GlycoLLM's predictive 
+                        capabilities and GlycoKG's constraint checking.</li>
+                    <li><b>Multi-Evidence Integration:</b> Bayesian fusion of spectral evidence, structural motifs, glycosylation 
+                        sites, and clinical annotations with calibrated uncertainty quantification.</li>
+                </ul>
+            </div>
+        
+            <div class="applications">
+                <h4>Expected Outcomes</h4>
+                <p>
+                    Mechanistically grounded biomarkers with explicit pathway-level explanations, demonstrated cross-site 
+                    generalization in validation cohorts, and clinically actionable insights supported by biosynthetic plausibility.
+                </p>
+            </div>
         </div>
-
-        <div class="approach">
-          <h4>My Approach</h4>
-          <ul>
-            <li><b>GlycoKG:</b> biosynthetic pathways, enzyme specificities, tissue expression, and disease links encoded in RDF/SHACL.</li>
-            <li><b>GlycoGoT:</b> a graph-of-thoughts controller that decomposes analysis into propose → validate → refine, calling GlycoLLM or KG checks as needed.</li>
-            <li><b>Multi-evidence integration:</b> spectra, structure motifs, glycosites, and clinical labels fused with calibrated uncertainty.</li>
-          </ul>
-        </div>
-
-        <div class="applications">
-          <h4>Outcomes</h4>
-          <p>
-            Mechanistically plausible biomarkers with pathway-level explanations and cross-site generalization.
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
 
   <div class="research-synthesis">
