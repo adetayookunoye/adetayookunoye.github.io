@@ -105,85 +105,17 @@
   <div class="research-synthesis">
     <h3>Unifying Vision</h3>
     <p>
-      I develop AI that not only predicts but also <em>reasons within biochemical rules</em>.
-      By fusing language models with knowledge graphs and tool-use policies, my goal is robust, interpretable
-      glycoscience—from structure calls to clinically actionable signatures.
+      To close the Glycomics Gap by building foundational AI models that automatically read, translate, and reason about 
+      the structure and function of glycans, transforming them from analytical challenges into actionable 
+      biological insights. Our approach bridges the critical disconnect between mass spectrometry data and biological 
+      meaning by teaching AI the 'language' of glycosylation. We are creating systems that not only predict structures 
+      from spectra but also explain their biosynthetic pathways and disease relevance. The result is a new paradigm for 
+      glycoscience, where AI partners with researchers to accelerate the discovery of glycan-based biomarkers and 
+      therapeutic targets.
     </p>
   </div>
 </section>
 
-<section id="research-directions">
-  <h2>Research Directions</h2>
-
-  <!-- Direction 1 -->
-  <div class="research-direction">
-    <h3>Direction 1: Structure Elucidation with GlycoLLM</h3>
-    <p>Domain-specialized LLMs for spectra→structure with selective prediction and transparent rationales.</p>
-
-    <div class="research-phase">
-      <h4>Phase 1: Data & Tokenization</h4>
-      <ul>
-        <li>Public datasets only (e.g., GlycoPOST, GlyTouCan, GlyConnect, GlyGen context).</li>
-        <li>Joint tokenization for WURCS/GlycoCT and spectral bins; motif fingerprints.</li>
-      </ul>
-    </div>
-
-    <div class="research-phase">
-      <h4>Phase 2: Multimodal Training</h4>
-      <ul>
-        <li>Masked motif/linkage objectives; spectra↔structure contrastive alignment.</li>
-        <li>In-silico fragmentation supervision for fragment-level faithfulness.</li>
-      </ul>
-    </div>
-
-    <div class="research-phase">
-      <h4>Phase 3: Inference & Reranking</h4>
-      <ul>
-        <li>Constrained candidate generation (mass/adduct windows), KG-checked plausibility (SHACL).</li>
-        <li>Learned score: spectral similarity + KG priors + LLM likelihood.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Direction 2 -->
-  <div class="research-direction">
-    <h3>Direction 2: Biomarker Discovery with GlycoGoT + GlycoKG</h3>
-    <p>Neuro-symbolic discovery of glycan/glycoprotein signatures for detection, staging, and prognosis.</p>
-
-    <div class="research-aim">
-      <h4>Aim 1: KG-Grounded Signals</h4>
-      <ul>
-        <li>Encode enzyme reachability, tissue priors, and pathway context as constraints.</li>
-        <li>Filter spurious signals; surface mechanism-level explanations.</li>
-      </ul>
-    </div>
-
-    <div class="research-aim">
-      <h4>Aim 2: Robust Evaluation</h4>
-      <ul>
-        <li>Top-k accuracy, risk-coverage with abstention, explanation faithfulness, KG consistency.</li>
-        <li>Biomarker AUC/C-index, calibration, and cross-site transfer.</li>
-      </ul>
-    </div>
-
-    <div class="research-aim">
-      <h4>Aim 3: Reproducible Tools</h4>
-      <ul>
-        <li>Named-graph provenance, SPARQL APIs, and ready-to-run notebooks for labs.</li>
-        <li>Configurable pipelines for spectra ingestion, structure calls, and cohort analysis.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="impact">
-  <h2>Broader Impact & Vision</h2>
-  <p>
-    By enforcing biochemical constraints and delivering explainable outputs, my systems aim to become
-    everyday instruments for glyco labs—accelerating structure calls, improving reproducibility, and
-    translating glycan biology into clinical value.
-  </p>
-</section>
 
 <section id="projects">
   <h2>Software & Research Projects</h2>
