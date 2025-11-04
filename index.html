@@ -36,32 +36,34 @@
 
   <div class="research-thrusts">
     <div class="thrust">
-      <h3>Thrust 1: GlycoLLM — Multimodal Structure Elucidation</h3>
+      <h3>Thrust 1: GlycoLLM: Multimodal Foundation Model for Glycan Structure Elucidation</h3>
       <div class="thrust-content">
-        <div class="problem-statement">
-          <h4>Challenge</h4>
-          <p>
-            Tandem MS/MS data carries isomeric ambiguity and limited library coverage, making expert-driven
-            interpretation slow and inconsistent.
-          </p>
-        </div>
-
-        <div class="approach">
-          <h4>My Approach</h4>
-          <ul>
-            <li><b>GlycoLLM:</b> an LLM adapted to jointly encode spectra, WURCS/GlycoCT graphs, and metadata.</li>
-            <li><b>Contrastive fragment–structure alignment:</b> align peaks to substructures/motifs.</li>
-            <li><b>In-silico fragmentation + reranking:</b> generate candidates, score with spectral similarity and language likelihood.</li>
-          </ul>
-        </div>
-
-        <div class="applications">
-          <h4>Outcomes</h4>
-          <p>
-            Higher top-k accuracy for unknowns, selective abstention with confidence, and step-by-step
-            explanations that map predicted fragments to observed peaks.
-          </p>
-        </div>
+          <div class="problem-statement">
+              <h4>Challenge</h4>
+              <p>
+                  Definitive interpretation of tandem MS/MS data remains a critical bottleneck in glycomics, 
+                  hampered by pervasive isomeric ambiguity, sparse spectral library coverage, and reliance 
+                  on manual expert-driven analysis that is inherently slow and inconsistent.
+              </p>
+          </div>
+      
+          <div class="approach">
+              <h4>Research Approach</h4>
+              <ul>
+                  <li><b>GlycoLLM:</b> A domain-specialized large language model engineered for joint encoding of spectral data, WURCS/GlycoCT structural graphs, and experimental metadata.</li>
+                  <li><b>Contrastive fragment-structure alignment:</b> Explicitly maps spectral peaks to specific glycan substructures and motifs through multimodal learning.</li>
+                  <li><b>In-silico fragmentation with reranking:</b> Generates candidate structures validated through spectral similarity scoring and structural plausibility assessment.</li>
+              </ul>
+          </div>
+      
+          <div class="applications">
+              <h4>Expected Outcomes</h4>
+              <p>
+                  Superior top-k identification accuracy for novel and isomeric glycans; confidence-aware 
+                  predictions with selective abstention capabilities; and explainable, step-by-step rationales 
+                  mapping predicted structural elements to observed spectral evidence.
+              </p>
+          </div>
       </div>
     </div>
 
