@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Adetayo O. Okunoye | Ph.D. Student | AI for Scientific Discovery</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Adetayo O. Okunoye | Ph.D. Student | AI for Glycoscience</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
   <h1>Adetayo Olufemi Okunoye</h1>
   <p>Ph.D. Student in Computer Science, University of Georgia</p>
-  <p><b>Research Focus:</b> AI for Scientific Discovery & Experimental Design</p>
+  <p><b>Research Focus:</b> Neuro-symbolic LLMs for Glycomics & Glycoproteomics</p>
   <nav>
     <a href="index.html">Home</a> |
     <a href="research.html">Research</a> |
@@ -22,90 +22,71 @@
 
 <section id="overview">
   <h2>Research Overview</h2>
-  
+
   <div class="research-intro">
     <p>
-      My research program develops artificial intelligence systems that fundamentally accelerate scientific discovery 
-      by bridging the gap between data-driven learning and domain-specific knowledge. I pursue this vision through two complementary 
-      research thrusts that address critical bottlenecks in both computational and experimental science:
+      I build <em>neuro-symbolic</em> AI systems that make glycoscience faster, cheaper, and more explainable.
+      My work combines large language models (LLMs), graph-of-thoughts reasoning, and knowledge graphs to
+      decode glycan structures from mass spectra and to discover clinically meaningful glycan biomarkers.
+      I prioritize <strong>transparent rationales</strong>, <strong>biochemical validity</strong>, and
+      <strong>reproducible tooling</strong> that labs can use in practice.
     </p>
   </div>
 
   <div class="research-thrusts">
     <div class="thrust">
-      <h3>Thrust 1: Physics-Constrained Machine Learning for Scientific Simulation</h3>
+      <h3>Thrust 1: GlycoLLM — Multimodal Structure Elucidation</h3>
       <div class="thrust-content">
         <div class="problem-statement">
-          <h4>Problem</h4>
+          <h4>Challenge</h4>
           <p>
-            Current deep learning approaches for scientific simulation often violate fundamental physical laws, 
-            producing physically implausible results that limit their utility in real-world applications. 
-            While neural operators can learn powerful mappings from data, they frequently fail to respect 
-            conservation laws, symmetry principles, and other domain constraints that make physical systems 
-            predictable and interpretable.
+            Tandem MS/MS data carries isomeric ambiguity and limited library coverage, making expert-driven
+            interpretation slow and inconsistent.
           </p>
         </div>
-        
+
         <div class="approach">
-          <h4>Approach</h4>
-          <p>
-            I develop provably constrained probabilistic operator models that embed physical 
-            constraints directly into neural architectures through mathematical guarantees rather than 
-            soft penalties. By designing models where conservation laws (mass, energy, momentum) are 
-            enforced <em>by construction</em>, I create AI systems that learn from physical systems while 
-            remaining fundamentally faithful to the underlying physics.
-          </p>
+          <h4>My Approach</h4>
           <ul>
-            <li>Architectural Guarantees: Designing neural networks that inherently satisfy PDE constraints through careful architectural choices</li>
-            <li>Probabilistic Modeling: Incorporating uncertainty quantification while maintaining physical consistency</li>
-            <li>Multi-Scale Learning: Bridging scales from microscopic interactions to macroscopic phenomena</li>
+            <li><b>GlycoLLM:</b> an LLM adapted to jointly encode spectra, WURCS/GlycoCT graphs, and metadata.</li>
+            <li><b>Contrastive fragment–structure alignment:</b> align peaks to substructures/motifs.</li>
+            <li><b>In-silico fragmentation + reranking:</b> generate candidates, score with spectral similarity and language likelihood.</li>
           </ul>
         </div>
 
         <div class="applications">
-          <h4>Applications</h4>
+          <h4>Outcomes</h4>
           <p>
-            Climate modeling, fluid dynamics, materials design, and renewable energy systems—domains where 
-            physical consistency is non-negotiable and traditional simulations are computationally prohibitive.
+            Higher top-k accuracy for unknowns, selective abstention with confidence, and step-by-step
+            explanations that map predicted fragments to observed peaks.
           </p>
         </div>
       </div>
     </div>
 
     <div class="thrust">
-      <h3>Thrust 2: Closed-Loop Active Design for Genome-wide Perturb-seq</h3>
+      <h3>Thrust 2: GlycoGoT + GlycoKG — Reasoned, Constraint-Aware Biomarker Discovery</h3>
       <div class="thrust-content">
         <div class="problem-statement">
-          <h4>Problem</h4>
+          <h4>Challenge</h4>
           <p>
-            Genome-scale Perturb-seq screens, which measure transcriptomic responses to genetic perturbations, 
-            are revolutionizing functional genomics but remain prohibitively expensive. Profiling a full library 
-            of perturbations requires millions of cells and substantial financial resources, creating a fundamental 
-            accessibility barrier for most research labs and limiting the scale of biological discovery.
+            Many “significant” glycan signals do not replicate across cohorts or lack mechanistic grounding.
           </p>
         </div>
-        
+
         <div class="approach">
-          <h4>Approach</h4>
-          <p>
-            I create closed-loop AI systems that actively design optimal perturbation experiments 
-            by sequentially selecting the most informative genetic perturbations to profile. My framework combines 
-            optimal transport theory with information-theoretic acquisition functions to maximize learning efficiency 
-            under strict experimental budgets.
-          </p>
+          <h4>My Approach</h4>
           <ul>
-            <li>Optimal Transport Acquisition: Using transport plan properties as novel uncertainty signals for perturbation selection</li>
-            <li>Mutual Information Maximization: Adapting information-theoretic criteria to high-dimensional transcriptomic effect spaces</li>
-            <li>Interaction Discovery: Extending active selection to guide pairs for synergistic effect identification</li>
-            <li>Practical Deployment: Developing plug-and-play policy APIs for immediate lab adoption</li>
+            <li><b>GlycoKG:</b> biosynthetic pathways, enzyme specificities, tissue expression, and disease links encoded in RDF/SHACL.</li>
+            <li><b>GlycoGoT:</b> a graph-of-thoughts controller that decomposes analysis into propose → validate → refine, calling GlycoLLM or KG checks as needed.</li>
+            <li><b>Multi-evidence integration:</b> spectra, structure motifs, glycosites, and clinical labels fused with calibrated uncertainty.</li>
           </ul>
         </div>
 
         <div class="applications">
-          <h4>Applications</h4>
+          <h4>Outcomes</h4>
           <p>
-            Functional genomics, drug target discovery, genetic interaction mapping, and personalized medicine—enabling 
-            large-scale perturbation studies at a fraction of current costs while accelerating therapeutic development.
+            Mechanistically plausible biomarkers with pathway-level explanations and cross-site generalization.
           </p>
         </div>
       </div>
@@ -115,17 +96,9 @@
   <div class="research-synthesis">
     <h3>Unifying Vision</h3>
     <p>
-      While addressing different scientific domains, both research thrusts share a common philosophy: 
-      AI should not merely predict but should reason within scientific constraints. 
-      In simulation, this means respecting physical laws; in experimental design, this means optimizing 
-      information gain under resource constraints. By developing AI systems that understand and operate 
-      within these fundamental boundaries, I aim to create the next generation of scientific tools that 
-      are not just powerful but also trustworthy, interpretable, and practically deployable.
-    </p>
-    <p>
-      The ultimate goal is to establish principled frameworks for AI-driven scientific discovery 
-      that can be adapted across multiple domains, accelerating our understanding of complex systems 
-      from the molecular to the planetary scale.
+      I develop AI that not only predicts but also <em>reasons within biochemical rules</em>.
+      By fusing language models with knowledge graphs and tool-use policies, my goal is robust, interpretable
+      glycoscience—from structure calls to clinically actionable signatures.
     </p>
   </div>
 </section>
@@ -133,80 +106,62 @@
 <section id="research-directions">
   <h2>Research Directions</h2>
 
-  <!-- Research Direction 1 -->
+  <!-- Direction 1 -->
   <div class="research-direction">
-    <h3>Direction 1: Provably Constrained Probabilistic Operators for Scientific Discovery</h3>
-    <p>Research Core: Embedding physical constraints directly into neural operator architectures to create models that predict while respecting physics.</p>
-    
+    <h3>Direction 1: Structure Elucidation with GlycoLLM</h3>
+    <p>Domain-specialized LLMs for spectra→structure with selective prediction and transparent rationales.</p>
+
     <div class="research-phase">
-      <h4>Phase 1: Foundation & The Tractable Testbed</h4>
+      <h4>Phase 1: Data & Tokenization</h4>
       <ul>
-        <li>Focus Areas: Hard-constrained architectures, probabilistic operator learning, generative models for PDEs</li>
-        <li>Physics: 2D Incompressible Navier–Stokes Equation with mass conservation (∇·u = 0)</li>
-        <li>Goal: Learn probabilistic operators that map initial conditions to future states while provably conserving mass</li>
+        <li>Public datasets only (e.g., GlycoPOST, GlyTouCan, GlyConnect, GlyGen context).</li>
+        <li>Joint tokenization for WURCS/GlycoCT and spectral bins; motif fingerprints.</li>
       </ul>
     </div>
 
     <div class="research-phase">
-      <h4>Phase 2: The Hard-Constrained Deterministic Core</h4>
+      <h4>Phase 2: Multimodal Training</h4>
       <ul>
-        <li>Development of Divergence-Free Fourier Neural Operator (DF-FNO)</li>
-        <li>Architectural guarantees replacing soft physics penalties with exact conservation</li>
-        <li>General methodology for physically consistent deep learning architectures</li>
+        <li>Masked motif/linkage objectives; spectra↔structure contrastive alignment.</li>
+        <li>In-silico fragmentation supervision for fragment-level faithfulness.</li>
       </ul>
     </div>
 
     <div class="research-phase">
-      <h4>Phase 3: The Probabilistic Leap</h4>
+      <h4>Phase 3: Inference & Reranking</h4>
       <ul>
-        <li>Coupling divergence-free operators with Conditional Variational Autoencoders (cVAE)</li>
-        <li>Generative modeling with physically valid uncertainty quantification</li>
-        <li>Paper: "Sampling from the Physical Manifold: Probabilistic Neural Operators with Hard Constraints"</li>
-      </ul>
-    </div>
-
-    <div class="research-phase">
-      <h4>Phase 4: Demonstration & Abstraction</h4>
-      <ul>
-        <li>Generalization to Wave Equation and Darcy Flow</li>
-        <li>Open-source library of constraint-enforcing neural layers</li>
-        <li>Interpretable latent dimensions for physical mechanisms</li>
+        <li>Constrained candidate generation (mass/adduct windows), KG-checked plausibility (SHACL).</li>
+        <li>Learned score: spectral similarity + KG priors + LLM likelihood.</li>
       </ul>
     </div>
   </div>
 
-  <!-- Research Direction 2 -->
+  <!-- Direction 2 -->
   <div class="research-direction">
-    <h3>Direction 2: Closed-Loop Active Design for Genome-wide Perturb-seq</h3>
-    <p>Research Extension:Optimal transport and mutual information frameworks for cost-effective perturbation discovery in single-cell genomics.</p>
-    
+    <h3>Direction 2: Biomarker Discovery with GlycoGoT + GlycoKG</h3>
+    <p>Neuro-symbolic discovery of glycan/glycoprotein signatures for detection, staging, and prognosis.</p>
+
     <div class="research-aim">
-      <h4>Aim 1: Novel Acquisition Functions for Perturbation Selection</h4>
+      <h4>Aim 1: KG-Grounded Signals</h4>
       <ul>
-        <li>Bayesian encoder-decoder trained on Replogle CRISPRi data</li>
-        <li>OT-based acquisition: Using transport-mass entropy and displacement norms as uncertainty signals</li>
-        <li>Mutual information acquisition: BatchBALD adaptation for transcriptomic effect vectors</li>
-        <li>Novelty: First use of OT plan properties to drive active selection in Perturb-seq</li>
+        <li>Encode enzyme reachability, tissue priors, and pathway context as constraints.</li>
+        <li>Filter spurious signals; surface mechanism-level explanations.</li>
       </ul>
     </div>
 
     <div class="research-aim">
-      <h4>Aim 2: Standardized Benchmark for Active Perturb-seq Design</h4>
+      <h4>Aim 2: Robust Evaluation</h4>
       <ul>
-        <li>Offline "counterfactual" benchmark using Replogle 2022 data</li>
-        <li>Stratified splits by pathways and gene essentiality</li>
-        <li>Area Under Learning Curve (AULC) metrics for R² and DE recall</li>
-        <li>Comparison: OT-acquisition vs. Bayesian BALD vs. core-set k-center</li>
+        <li>Top-k accuracy, risk-coverage with abstention, explanation faithfulness, KG consistency.</li>
+        <li>Biomarker AUC/C-index, calibration, and cross-site transfer.</li>
       </ul>
     </div>
 
     <div class="research-aim">
-      <h4>Aim 3: Guide-Pair Selection & Practical Deployment</h4>
+      <h4>Aim 3: Reproducible Tools</h4>
       <ul>
-        <li>Extension to guide-pair acquisition for interaction discovery</li>
-        <li>Information gain maximization for synergistic effects</li>
-        <li>Development of "Policy API" for plug-and-play experimental design</li>
-        <li>Budget-aware ranking of perturbations without wet-lab integration</li>
+        <li>Named-graph provenance, SPARQL APIs, and ready-to-run notebooks for labs.</li>
+        <li>Configurable pipelines for spectra ingestion, structure calls, and cohort analysis.</li>
       </ul>
     </div>
   </div>
@@ -215,33 +170,23 @@
 <section id="impact">
   <h2>Broader Impact & Vision</h2>
   <p>
-    My research advances AI as a fundamental instrument for scientific discovery. In scientific simulation, 
-    enforcing physical laws within neural architectures enables trustworthy, interpretable surrogates that 
-    accelerate climate modeling, fluid mechanics, and materials design. In experimental design, 
-    AI-driven active learning reduces the cost of genomic screens by orders of magnitude, 
-    making large-scale perturbation studies accessible to more labs and accelerating therapeutic target discovery.
-  </p>
-  <p>
-    The unifying vision is to develop AI systems that not only predict but also <em>reason</em> and <em>design</em> 
-    within scientific constraints, bridging data-driven learning with domain knowledge to solve previously 
-    intractable problems in both physical and biological sciences.
+    By enforcing biochemical constraints and delivering explainable outputs, my systems aim to become
+    everyday instruments for glyco labs—accelerating structure calls, improving reproducibility, and
+    translating glycan biology into clinical value.
   </p>
 </section>
 
 <section id="projects">
   <h2>Software & Research Projects</h2>
   <ul>
-    <li>Wadeable Streams Project: Intelligent data tools for environmental stream health monitoring (U.S. Department of the Interior)</li>
-    <li>ExamPrep Platform: Adaptive educational analytics with ML-based question difficulty estimation</li>
+    <li>GlycoLLM Toolkit: Multimodal pretraining/finetuning for spectra↔structure.</li>
+    <li>GlycoKG & APIs: RDF/SHACL schemas, SPARQL endpoints, and provenance utilities.</li>
+    <li>GlycoGoT Orchestrator: Graph-of-thoughts controller for proposal→validate→refine loops.</li>
   </ul>
 </section>
 
-
-
-
-
 <footer>
-  <p>© 2025 Adetayo O. Okunoye | AI for Scientific Discovery & Experimental Design | University of Georgia</p>
+  <p>© 2025 Adetayo O. Okunoye | AI for Glycoscience | University of Georgia</p>
 </footer>
 
 </body>
