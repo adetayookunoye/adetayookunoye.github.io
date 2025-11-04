@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adetayo O. Okunoye | Ph.D. Student | AI for Glycoscience</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Adetayo Olufemi Okunoye</h1>
+  <p>Ph.D. Student in Computer Science, University of Georgia</p>
+  <p><b>Research Focus:</b> Neuro-symbolic LLMs for Glycomics & Glycoproteomics</p>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="research.html">Research</a> |
+    <a href="publications.html">Publications</a> |
+    <a href="resume.html">CV</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section id="overview">
+  <h2>Research Overview</h2>
+
+  <div class="research-intro">
+    <p>
+      Glycomics lags behind genomics/proteomics because MS/MS analysis suffers from isomeric ambiguity, 
+      sparse libraries, lab variability, and manual, subjective interpretation. We propose an integrated multimodal 
+      AI GlycoLLM (encodes spectra + glycan graphs + metadata), GlycoKG (biosynthetic constraints), 
+      and GlycoGoT (structured reasoning), that jointly reasons across modalities to produce accurate, 
+      confidence-aware, and explainable results. The system powers two applications: automated structure 
+      elucidation (with follow-up experiment planning for tough isomers) and biomarker discovery for cancer, 
+      unlocking the biological and clinical potential of the glycome.
+    </p>
+  </div>
+
+  <div class="research-thrusts">
+    <div class="thrust">
+      <h3>Thrust 1: GlycoLLM: Multimodal Foundation Model for Glycan Structure Elucidation</h3>
+      <div class="thrust-content">
+          <div class="problem-statement">
+              <h4>Challenge</h4>
+              <p>
+                  Definitive interpretation of tandem MS/MS data remains a critical bottleneck in glycomics, 
+                  hampered by pervasive isomeric ambiguity, sparse spectral library coverage, and reliance 
+                  on manual expert-driven analysis that is inherently slow and inconsistent.
+              </p>
+          </div>
+      
+          <div class="approach">
+              <h4>Research Approach</h4>
+              <ul>
+                  <li><b>GlycoLLM:</b> A domain-specialized large language model engineered for joint encoding of spectral data, WURCS/GlycoCT structural graphs, and experimental metadata.</li>
+                  <li><b>Contrastive fragment-structure alignment:</b> Explicitly maps spectral peaks to specific glycan substructures and motifs through multimodal learning.</li>
+                  <li><b>In-silico fragmentation with reranking:</b> Generates candidate structures validated through spectral similarity scoring and structural plausibility assessment.</li>
+              </ul>
+          </div>
+      
+          <div class="applications">
+              <h4>Expected Outcomes</h4>
+              <p>
+                  Superior top-k identification accuracy for novel and isomeric glycans; confidence-aware 
+                  predictions with selective abstention capabilities; and explainable, step-by-step rationales 
+                  mapping predicted structural elements to observed spectral evidence.
+              </p>
+          </div>
+      </div>
+    </div>
+
+    <div class="thrust">
+        <h3>Thrust 2: GlycoGoT + GlycoKG — Knowledge-Guided Biomarker Discovery with Causal Reasoning</h3>
+        <div class="thrust-content">
+            <div class="problem-statement">
+                <h4>Challenge</h4>
+                <p>
+                    Current glycan biomarker discovery often identifies statistically significant signals that fail to replicate 
+                    across cohorts due to limited mechanistic grounding and insufficient integration of biosynthetic constraints. 
+                    This results in biomarkers that lack biological plausibility and clinical translatability.
+                </p>
+            </div>
+        
+            <div class="approach">
+                <h4>Research Approach</h4>
+                <ul>
+                    <li><b>GlycoKG Knowledge Graph:</b> Comprehensive encoding of biosynthetic pathways, enzyme specificities, 
+                        tissue-specific expression patterns, and established disease associations using RDF/SHACL constraints.</li>
+                    <li><b>GlycoGoT Reasoning Engine:</b> A graph-of-thoughts controller that orchestrates multi-step biomarker 
+                        validation through propose → validate → refine cycles, dynamically routing between GlycoLLM's predictive 
+                        capabilities and GlycoKG's constraint checking.</li>
+                    <li><b>Multi-Evidence Integration:</b> Bayesian fusion of spectral evidence, structural motifs, glycosylation 
+                        sites, and clinical annotations with calibrated uncertainty quantification.</li>
+                </ul>
+            </div>
+        
+            <div class="applications">
+                <h4>Expected Outcomes</h4>
+                <p>
+                    Mechanistically grounded biomarkers with explicit pathway-level explanations, demonstrated cross-site 
+                    generalization in validation cohorts, and clinically actionable insights supported by biosynthetic plausibility.
+                </p>
+            </div>
+        </div>
+  </div>
+
+  <div class="research-synthesis">
+    <h3>Unifying Vision</h3>
+    <p>
+      To close the Glycomics Gap by building foundational AI models that automatically read, translate, and reason about 
+      the structure and function of glycans, transforming them from analytical challenges into actionable 
+      biological insights. Our approach bridges the critical disconnect between mass spectrometry data and biological 
+      meaning by teaching AI the 'language' of glycosylation. We are creating systems that not only predict structures 
+      from spectra but also explain their biosynthetic pathways and disease relevance. The result is a new paradigm for 
+      glycoscience, where AI partners with researchers to accelerate the discovery of glycan-based biomarkers and 
+      therapeutic targets.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Adetayo O. Okunoye | AI for Glycoscience | University of Georgia</p>
+</footer>
+
+</body>
+</html>
 
