@@ -149,3 +149,31 @@ ul { list-style-type: square; }
     grid-template-areas: "problem approach applications";
   }
 }
+
+/* --- Tighten role / org / date spacing in the timeline --- */
+.timeline-item { margin: 14px 0; }              /* slightly tighter between items */
+
+.timeline-content { padding: 12px 14px; }       /* trim padding a bit */
+.timeline-content .role {
+  margin: 0 0 2px 0; 
+  line-height: 1.25;
+}
+
+/* Make org + when sit on a single line with a small separator */
+.timeline-content p { margin: 0; }              /* remove default paragraph gaps */
+.timeline-content .org,
+.timeline-content .when {
+  display: inline; 
+  color: var(--muted);
+  font-size: 14px; 
+}
+.timeline-content .org::after {
+  content: " • ";
+  margin: 0 6px;
+  opacity: 0.85;
+}
+
+/* Small gap before bullets only */
+.timeline-content .bullets { 
+  margin: 8px 0 0 0; 
+}
